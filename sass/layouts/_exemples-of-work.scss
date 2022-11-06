@@ -1,0 +1,35 @@
+/* ---------------- Exemples of work ------------------- */
+
+.second-head {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.our-work {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 94px;
+}
+
+.work-wrap {
+  position: relative;
+}
+
+.our-work__discrip {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-white);
+  padding: 27px 0;
+  background: rgba(47, 48, 58, 0.8);
+}

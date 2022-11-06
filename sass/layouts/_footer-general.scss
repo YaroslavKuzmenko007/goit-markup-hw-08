@@ -1,0 +1,48 @@
+/* ------------- Footer -------------------- */
+.footer {
+  background-color: var(--bg-color);
+  padding: 60px 0;
+}
+
+.footer-content {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-mail,
+.footer-tel {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+}
+
+.href {
+  color: var(--color-white);
+  text-decoration: none;
+  transition: var(--color-animation);
+    &:hover,
+    &:focus {
+      color: var(--color-acent);
+    }
+}
+
+.address {
+  line-height: 1.71;
+  font-style: normal;
+    &:hover,
+    &:focus {
+      color: var(--color-acent);
+    }
+}
+
+.footer .head {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.address .contact__item {
+  margin-bottom: 9px;
+     &:last-child {
+      margin-bottom: 0;
+    }
+}
+

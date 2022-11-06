@@ -1,0 +1,23 @@
+.soc-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.soc-list__link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: var(--icon-color);
+  transition: var(--bg-animation), var(--fill-animation);
+    &:hover,
+    &:focus {
+      background-color: var(--color-acent);
+      fill: var(--color-white);
+    }
+}
+
