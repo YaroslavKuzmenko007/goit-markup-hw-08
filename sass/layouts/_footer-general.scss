@@ -1,12 +1,66 @@
 /* ------------- Footer -------------------- */
 .footer {
+  width: 100%;
   background-color: var(--bg-color);
   padding: 60px 0;
 }
 
 .footer-content {
   display: flex;
-  align-items: baseline;
+
+  @include media-max(767px) {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  @include media-min-max(768px, 1199px) {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  @include media-min(1200px) {
+    align-items: baseline;
+  }
+}
+
+.footer__adress {
+  text-align: center;
+  margin-bottom: 60px;
+  @include tablet {
+    // margin-bottom: 0;
+  }
+  @include desktop {
+    margin-bottom: 0;
+    text-align: left;
+    width: 215px;
+  }
+}
+
+.footer__logo {
+  font-family: 'Raleway';
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: calc(28 / 24);
+  letter-spacing: 0.03 em;
+  margin-bottom: 20px;
+  display: block;
+
+  @include desktop {
+    font-size: 26px;
+    line-height: calc(31 / 26);
+  }
+}
+
+.contact__list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include media-min(1200px) {
+    width: 215px;
+    align-items: flex-start;
+  }
 }
 
 .footer-mail,
@@ -19,6 +73,7 @@
   color: var(--color-white);
   text-decoration: none;
   transition: var(--color-animation);
+  
     &:hover,
     &:focus {
       color: var(--color-acent);
@@ -36,6 +91,7 @@
 
 .footer .head {
   display: block;
+  margin: 0 auto;
   margin-bottom: 20px;
 }
 
