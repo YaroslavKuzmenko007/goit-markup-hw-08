@@ -1,27 +1,69 @@
 /* -------- Hero section ---------------------*/
 .hero {
-  height: 600px;
+  min-height: 400px;
   max-width: 1600px;
+  padding: 118px 0;
   margin: 0 auto;
   background: var(--bg-color);
-  padding: 200px 0;
   background-image: linear-gradient(to right,
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)),
-    url(../images/bgimage.jpg);
+    url(../images/hero-bg/hero-480-1.jpg);
   background-repeat: no-repeat;
+  background-position: 50% 50%;
   background-size: cover;
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-bg/hero-480-2.jpg);
+    }
+    
+  @include tablet {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero-bg/hero-768-1.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-bg/hero-768-2.jpg);
+    }
+  }
+    @include desktop {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-bg/hero-1200-1.jpg);
+  
+      @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+          url(../images/hero-bg/hero-1200-2.jpg);
+      }
+    }
+  
+    @include tablet {
+      padding: 200px 0;
+    }
+  
 }
 
 .hero__head {
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: calc(42 / 26);
   letter-spacing: 0.06em;
   color: var(--color-white);
   text-transform: uppercase;
-  max-width: 696px;
   margin: 0 auto;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   text-align: center;
+  @include tablet{
+    max-width: 360px;
+  }
+  
+  @include desktop {
+      max-width: 696px;
+      height: 120px;
+      font-size: 44px;
+      line-height: calc(60 / 44);
+      margin-bottom: 40px;
+    }
 }

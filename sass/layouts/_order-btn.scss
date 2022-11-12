@@ -1,4 +1,4 @@
-.order-buuton {
+.order-button {
   font-weight: 700;
   font-size: 16px;
   font-family: inherit;
@@ -11,12 +11,16 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   display: block;
-  padding: 10px 32px;
+  padding: 10px 24px;
   margin: 0 auto;
   transition: var(--bg-animation);
     &:hover,
     &:focus {
       background-color: var(--btn-hover);
     }
+  @include desktop {
+    padding: 10px 32px;
+  }
+  
 }
 
