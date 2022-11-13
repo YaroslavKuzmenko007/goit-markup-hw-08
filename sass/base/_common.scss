@@ -22,3 +22,7 @@ body {
 .white {
   color: var(--color-white);
 }
+
+.no-scroll {
+  overflow: hidden;
+}
