@@ -127,14 +127,20 @@ body {
 }
 
 .modal {
-  width: 528px;
   min-height: 581px;
+  width: 450px;
+  height: 609px;
   background-color: var(--color-white);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+  }
 }
 
 .backdrop.is-hidden .modal {
@@ -168,12 +174,6 @@ body {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-}
-
-.modal-group {
-  display: block;
-  width: 528px;
-  height: 581px;
 }
 
 .modal-form-title {
@@ -210,11 +210,16 @@ body {
 }
 
 .form-field input {
-  width: 448px;
+  width: 370px;
   height: 40px;
   padding: 12px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+}
+@media screen and (min-width: 1200px) {
+  .form-field input {
+    width: 448px;
+  }
 }
 
 .form-label {
@@ -246,7 +251,7 @@ body {
 }
 
 .form-comment {
-  width: 448px;
+  width: 370px;
   height: 120px;
   resize: none;
   padding: 12px 16px;
@@ -258,6 +263,11 @@ body {
   border: 1px solid var(--color-acent);
   outline: none;
   transition: var(--border-animation);
+}
+@media screen and (min-width: 1200px) {
+  .form-comment {
+    width: 448px;
+  }
 }
 
 .modal-form-checkbox {
