@@ -103,7 +103,7 @@ body {
 }
 @media screen and (min-width: 480px) {
   .container {
-    width: 480px;
+    width: 100%;
   }
 }
 @media screen and (min-width: 768px) {
@@ -363,6 +363,11 @@ body {
 .menu {
   display: flex;
 }
+@media screen and (max-width: 767px) {
+  .menu {
+    display: none;
+  }
+}
 
 .menu__item + .menu__item {
   /* border: 1px red solid; */
@@ -424,12 +429,6 @@ body {
   .contact {
     flex-wrap: wrap;
     margin-left: 96px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .contact__item {
-    padding: 5px 0;
   }
 }
 
@@ -514,7 +513,7 @@ body {
   }
 }
 @media screen and (max-width: 767px) {
-  .contact__item {
+  .header__mail, .header__tel {
     display: none;
   }
 }
@@ -544,6 +543,7 @@ body {
 }
 .mob-menu > .container {
   height: 100%;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   overflow: auto;
@@ -556,6 +556,9 @@ body {
   bottom: none;
   background-color: transparent;
   border: none;
+  position: absolute;
+  top: 10px;
+  right: 15px;
 }
 
 .close-menu-btn:hover,
@@ -595,10 +598,6 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
-}
-
-.mob-menu-bottom {
-  margin-top: 302px;
 }
 
 .contacts-mob-tel__link {
@@ -670,6 +669,11 @@ body {
   }
 }
 @media screen and (min-width: 768px) {
+  .hero {
+    padding: 118px 0;
+  }
+}
+@media screen and (min-width: 1200px) {
   .hero {
     padding: 200px 0;
   }
@@ -803,7 +807,7 @@ body {
 
 /* ---------------- Exemples of work ------------------- */
 .exemples-of-work {
-  padding: 94px 0;
+  padding-bottom: 94px;
   margin: 0 auto;
   display: none;
 }
@@ -819,6 +823,13 @@ body {
   line-height: 1.17;
   text-align: center;
   margin-bottom: 50px;
+}
+@media screen and (max-width: 1199px) {
+  .second-head {
+    margin-bottom: 30px;
+    font-size: 28px;
+    line-height: 1.1785714286;
+  }
 }
 
 .our-work {
@@ -1000,7 +1011,6 @@ body {
 
 .footer__adress {
   text-align: center;
-  margin-bottom: 60px;
 }
 @media screen and (min-width: 1200px) {
   .footer__adress {
@@ -1076,7 +1086,7 @@ body {
 }
 
 .footer-connect {
-  margin: 0 auto;
+  margin-top: 60px;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer-connect {
@@ -1099,13 +1109,17 @@ body {
   margin-bottom: 20px;
   text-align: center;
 }
+@media screen and (min-width: 1200px) {
+  .footer-connect-head {
+    text-align: left;
+  }
+}
 
 .footer-soc-list {
   display: flex;
   justify-content: center;
   gap: 10px;
   margin-top: 16px;
-  margin-bottom: 60px;
 }
 
 .footer-soc-link {
@@ -1126,10 +1140,12 @@ body {
 /* розсилка */
 .footer-mail-box {
   width: 100%;
-  margin: 0 auto;
+  margin: 60px auto 0;
 }
 @media screen and (min-width: 1200px) {
   .footer-mail-box {
+    display: flex;
+    flex-wrap: wrap;
     margin-left: 93px;
   }
 }
@@ -1158,9 +1174,10 @@ body {
 }
 
 .form-footer-mailing {
-  width: 100%;
+  width: 450px;
   height: 50px;
   margin-bottom: 20px;
+  margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
   .form-footer-mailing {
@@ -1172,15 +1189,16 @@ body {
 @media screen and (min-width: 1200px) {
   .form-footer-mailing {
     flex-direction: row;
-    align-items: flex-end;
-    margin: 0;
+    align-items: flex-start;
+    margin-right: 12px;
   }
 }
 
-.form-footer-mailing input {
-  width: 100%;
+.form-footer-mailing {
+  width: 450px;
   height: 50px;
-  margin: 0;
+  margin-left: auto;
+  margin-bottom: 20px;
   padding: 15px 16px;
   background-color: var(--bg-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -1189,21 +1207,26 @@ body {
   transition: var(--border-animation);
 }
 @media screen and (max-width: 767px) {
-  .form-footer-mailing input {
+  .form-footer-mailing {
     max-width: 450px;
     width: 100%;
   }
 }
 @media screen and (min-width: 768px) {
-  .form-footer-mailing input {
+  .form-footer-mailing {
     width: 450px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .form-footer-mailing input {
+  .form-footer-mailing {
     margin-bottom: 0;
     width: 358px;
   }
+}
+
+.form-footer-mailing input {
+  background-color: var(--bg-color);
+  border: none;
 }
 
 .mailing-input:hover,

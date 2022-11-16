@@ -29,6 +29,9 @@
 
 .menu {
   display: flex;
+  @include media-max(767px) {
+      display: none;
+    }
 }
 
 .menu__item+.menu__item {
@@ -86,12 +89,6 @@
   @include tablet{
     flex-wrap: wrap;
     margin-left: 96px;
-  }
-}
-
-.contact__item{
-  @include tablet {
-    padding: 5px 0;
   }
 }
 
@@ -179,7 +176,7 @@
 }
 
 @media screen and (max-width: 767px) {
-  .contact__item {
+  .header__mail, .header__tel {
     display: none;
   }
 }

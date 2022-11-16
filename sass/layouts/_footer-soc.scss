@@ -1,11 +1,12 @@
 .footer-connect {
-  margin: 0 auto;
+  margin-top: 60px;
   @include media-min-max(768px, 1199px) {
       margin: 0;
     }
   @include media-min(1200px) {
     margin-left: 70px;
   }
+  // margin-bottom: 60px;
 }
 
 .footer-connect-head {
@@ -17,6 +18,9 @@
   color: var(--color-white);
   margin-bottom: 20px;
   text-align: center;
+  @include media-min(1200px) {
+      text-align: left;
+    }
 }
 
 .footer-soc-list {
@@ -24,7 +28,7 @@
   justify-content: center;
   gap: 10px;
   margin-top: 16px;
-  margin-bottom: 60px;
+  // margin-bottom: 60px;
 }
 
 .footer-soc-link {
