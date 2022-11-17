@@ -18,10 +18,18 @@
 
 .modal-form-text {
   margin-right: 10px;
+  @media screen and (max-width: 1199px) {
+      font-size: 12px;
+      line-height: calc(14 / 12);
+    }
 }
 
 .modal-form-link {
   color: var(--color-acent);
+  @media screen and (max-width: 1199px) {
+      font-size: 12px;
+      line-height: calc(14 / 12);
+    }
 }
 
 .checkbox-icon {
